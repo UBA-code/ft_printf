@@ -1,5 +1,5 @@
 #include "ft_printf.h"
-#include "stdio.h"
+//#include "stdio.h"
 
 int ft_printf(const char *format, ...)
 {
@@ -12,9 +12,9 @@ int ft_printf(const char *format, ...)
     if (format[i] == '%' && format[i + 1] != '%')
       check_flags((const char)format[++i], va_arg(arg_list, void*));
     else if (format[i] == '%' && format[i + 1] == '%')
-      ft_putchar((char)format[i++]);
+      write(1, &format[i++], 1);
     else
-      ft_putchar((char)format[i]);
+      write(1, &format[i], 1);
     i++;
   }
   va_end(arg_list);
@@ -23,6 +23,6 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-  ft_printf("Hello %c", 'x');
+  ft_printf("Hello %d\n", 123456);
   return 0;
 }

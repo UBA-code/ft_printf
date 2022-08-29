@@ -2,5 +2,5 @@
 
 void  ft_flag_char(void *c)
 {
-  ft_putchar(c);
+  write(1, &c, 1);
 }
