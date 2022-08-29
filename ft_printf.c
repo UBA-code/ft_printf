@@ -23,6 +23,7 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-  ft_printf("Hello %d\n", -2147483648);
+  unsigned int x = 10;
+  ft_printf("Hello Everyone, %d\n", x);
   return 0;
 }

@@ -8,7 +8,7 @@ void check_flags(char c, void *arg)
   else if (c == 's')
     ft_flag_string(arg);
   else if (c == 'd' || c == 'i')
-    ft_flag_int(arg);
+    ft_flag_int(convert_void_int(arg));
   /*else if (c == 'p')
     ft_flag_pointer();
   else if (c == 'u')
