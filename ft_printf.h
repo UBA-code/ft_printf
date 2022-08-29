@@ -13,7 +13,6 @@ void ft_flag_int(int nb);
 
 /* converting functions*/
 
-// void *convert_int_void(int n);
 int convert_void_int(void *nbr);
 
 #endif
