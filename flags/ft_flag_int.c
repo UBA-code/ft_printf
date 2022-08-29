@@ -4,17 +4,16 @@ void    ft_flag_int(void *nb)
 {
     int nbr;
 
-    nbr = nb;
+    nbr = convert_void_int(nb);
     if (nbr == -2147483648)
     {
         ft_putchar('-');
         ft_putchar('2');
-        nbr = 147483648;
-        ft_flag_int((void *)nbr);
+        ft_flag_int((void *)(147483648));
     }
     else if (nbr > 9)
     {
-        ft_flag_int((void *)(nbr / 10));
+        ft_flag_int((void*)(nbr / 10));
         ft_putchar(nbr % 10 + '0');
     }
     else if (nbr < 0)

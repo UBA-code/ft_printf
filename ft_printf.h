@@ -7,10 +7,13 @@
 int ft_printf(const char *format, ...);
 void check_flags(char c, void *arg);
 int count_args(char *str);
-void  ft_flag_char(void *c);
-void    ft_flag_string(void *str);
-void    ft_flag_int(void *nb);
+void ft_flag_char(void *c);
+void ft_flag_string(void *str);
+void ft_flag_int(void *nb);
 
+/* converting functions*/
 
+void *convert_int_void(int n);
+int convert_void_int(void *nbr);
 
 #endif

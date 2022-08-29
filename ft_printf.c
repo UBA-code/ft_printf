@@ -23,6 +23,6 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-  ft_printf("Hello %d\n", 123456);
+  ft_printf("Hello %d\n", -2147483648);
   return 0;
 }
