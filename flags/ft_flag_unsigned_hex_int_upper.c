@@ -1,4 +1,4 @@
-#include "../ft_printf.h"
+#include "../srcs/ft_printf.h"
 
 void  ft_flag_unsigned_hex_int_upper(int p)
 {

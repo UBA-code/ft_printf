@@ -21,7 +21,7 @@ int ft_printf(const char *format, ...)
   va_end(arg_list);
   return (i);
 }
-
+/*
 int main()
 {
   //char x[] = "Hello World";
@@ -32,3 +32,4 @@ int main()
   ft_printf("%X", x);
   return 0;
 }
+*/
