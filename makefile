@@ -25,5 +25,4 @@ fclean:
 	rm *.a
 	make clean
 
-re:
-	
+re:	fclean all
