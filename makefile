@@ -10,6 +10,7 @@ all: $(NAME)
 $(NAME):
 	make -C ./lib/libft/
 	$(CC) $(FLAGS) -c $(SRCS)
+	cp lib/libft/libft.a ./
 	mkdir tempFiles
 	mv *.o tempFiles
 	ar rc $(NAME) $(TEMPFILES)
