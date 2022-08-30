@@ -5,12 +5,13 @@ int ft_printf(const char *format, ...)
 {
   int i;
   va_list arg_list;
-  va_start(arg_list, count_args((char *)format));
+
+  va_start(arg_list, format);
   i = 0;
   while (format[i])
   {
     if (format[i] == '%' && format[i + 1] != '%')
-      check_flags((const char)format[++i], va_arg(arg_list, void*));
+      check_flags((const char)format[++i], va_arg(arg_list, void *));
     else if (format[i] == '%' && format[i + 1] == '%')
       write(1, &format[i++], 1);
     else
@@ -23,7 +24,11 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-  unsigned int x = 10;
-  ft_printf("Hello Everyone, %d\n", x);
+  //char x[] = "Hello World";
+  int x = 4294967295;
+  ft_printf("%u\n", x);
+  ft_printf("%p\n", x);
+  ft_printf("%x\n", x);
+  ft_printf("%X", x);
   return 0;
 }

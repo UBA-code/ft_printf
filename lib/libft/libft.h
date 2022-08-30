@@ -17,6 +17,7 @@ char *ft_strchr(char *str, int c);
 char *ft_strnstr(char *haystack, char *needle, int len);
 void ft_putchar(char c);
 void ft_putstr(char *str);
+void    ft_putnbr(int nb);
 
 /* Type Functions */
 
